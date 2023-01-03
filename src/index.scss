@@ -1,0 +1,97 @@
+@import "./variables";
+*{
+    margin: 0;
+    padding: 0;
+}
+.navbar{
+    z-index: 1;
+    position: absolute;
+    width: 100%;
+    h2{
+        margin-left: 40px;
+        font-family: $font-title;
+        color: $color-nav;
+    }
+}
+.nav-item{
+    .fa{
+        margin-right: 40px;
+        font-size: 35px;
+        color:  $color-nav;
+    }
+}
+
+.App{
+    
+    height: 100vh;
+}
+.functions{
+    display: flex;
+    flex-direction: column;
+    .buttons{
+        display: flex;
+        flex-direction: row;
+        margin-bottom: 25px;
+        .buttons-break{
+           
+            display: flex;
+            justify-content: center;
+            width: 400px;
+        }
+        .buttons-length{
+            display: flex;
+            justify-content: center;
+            width: 400px;
+            
+        }
+        .button-2{
+            display: flex;
+            flex-direction: column-reverse;
+        }
+        
+        span{
+            font-family: $font-text;
+            font-size: 25px;
+        }
+}
+
+}
+button{
+    border: none;
+    
+    .fa{
+        font-size: 25px;
+        color: $color-nav;
+    }   
+}
+.main{
+    height: 100%;
+}
+.clock-main{
+    background-color:rgb(30, 116, 214) ;
+    color: $color-nav;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.card{
+    min-width: 300px;
+    background-color: transparent;
+    border-width: 10px;
+}
+.clock-main{
+    h1{
+        font-family: $font-title;
+    }
+    h2{
+        font-family: $font-title;
+    }
+    .timer{
+        font-size: 80px;
+        font-family: $font-text;
+    }
+}
+
+

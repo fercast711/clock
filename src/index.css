@@ -1,13 +1,95 @@
-body {
+@import url("https://fonts.googleapis.com/css2?family=Abel&family=Raleway:wght@500&display=swap");
+* {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.navbar {
+  z-index: 1;
+  position: absolute;
+  width: 100%;
 }
+.navbar h2 {
+  margin-left: 40px;
+  font-family: "Raleway", sans-serif;
+  color: aliceblue;
+}
+
+.nav-item .fa {
+  margin-right: 40px;
+  font-size: 35px;
+  color: aliceblue;
+}
+
+.App {
+  height: 100vh;
+}
+
+.functions {
+  display: flex;
+  flex-direction: column;
+}
+.functions .buttons {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 25px;
+}
+.functions .buttons .buttons-break {
+  display: flex;
+  justify-content: center;
+  width: 400px;
+}
+.functions .buttons .buttons-length {
+  display: flex;
+  justify-content: center;
+  width: 400px;
+}
+.functions .buttons .button-2 {
+  display: flex;
+  flex-direction: column-reverse;
+}
+.functions .buttons span {
+  font-family: "Abel", sans-serif;
+  font-size: 25px;
+}
+
+button {
+  border: none;
+}
+button .fa {
+  font-size: 25px;
+  color: aliceblue;
+}
+
+.main {
+  height: 100%;
+}
+
+.clock-main {
+  background-color: rgb(30, 116, 214);
+  color: aliceblue;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.card {
+  min-width: 300px;
+  background-color: transparent;
+  border-width: 10px;
+}
+
+.clock-main h1 {
+  font-family: "Raleway", sans-serif;
+}
+.clock-main h2 {
+  font-family: "Raleway", sans-serif;
+}
+.clock-main .timer {
+  font-size: 80px;
+  font-family: "Abel", sans-serif;
+}
+
+/*# sourceMappingURL=index.css.map */
