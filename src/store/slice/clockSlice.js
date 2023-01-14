@@ -11,13 +11,13 @@ const clockSlice = createSlice({
             state.valueLen += 1
         },
         setValueLenResta: (state)=>{
-            if(state.valueLen > 0)state.valueLen -= 1
+            if(state.valueLen > 1)state.valueLen -= 1
         },
         setValueBreSuma: (state)=>{
             state.valueBre += 1
         },
         setValueBreResta: (state)=>{
-            if(state.valueBre > 0)state.valueBre -= 1
+            if(state.valueBre > 1)state.valueBre -= 1
         }
     }
 })

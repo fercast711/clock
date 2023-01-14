@@ -44,7 +44,7 @@ const Clock = () => {
         <div className='clock'>
             <div className='card'>
                 <div className='card-body'>
-                <h2 className='card-title text-center'>Session</h2>
+                <h2 className='card-title text-center' id="title-card">Session</h2>
                 <div className='timer text-center' id='timer1'>{valueLen}:00</div>
                 </div>
             </div>
@@ -52,7 +52,10 @@ const Clock = () => {
         <div className='buttons-plays'>
             <button className='btn' onClick={()=>{
                 let tiempo = document.getElementById("timer1")
-                
+                let title = document.getElementById("title-card")
+                let sound = new Audio();
+                sound.src = "https://raw.githubusercontent.com/freeCodeCamp/cdn/master/build/testable-projects-fcc/audio/BeepSound.wav"
+
                 const arr = []
                 let h = valueLen
                 while(h>-1){
@@ -72,13 +75,40 @@ const Clock = () => {
                         if(arr[i]===0){
                             j--;
                         }
-                        
+                        if(j === -1){
+                            sound.play()
+                            title.innerHTML = "Break"
+                            const arr1 = []
+                            let h1 = valueBre
+                            while(h1 >-1){
+                                for(let i=59; i > -1; i--){
+                                    arr1.push(i)
+                                }
+                                h1--;
+                            }
+                
+                           let j1 = valueBre -1
+                
+                           for(let i =0; i< 60*valueBre; i++){
+                            (function(i){
+                                setTimeout(()=>{
+                                        
+                                    tiempo.innerHTML = j1+":"+arr1[i]
+                                    if(arr1[i]===0){
+                                        j1--;
+                                    }
+                                    
+                                },1000*(i+1))
+                                setTimeout(()=>{
+                                    sound.play()
+                                },60000*valueBre)
+                            })(i)
+                       }
+                           }
                     },1000*(i+1))
 
                 })(i)
            }
-           
-
             }}><i className='fa fa-play fa-2x'></i></button>
             <button className='btn' id="reset" onClick={()=>{
                  window.location.reload()
