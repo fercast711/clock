@@ -8,7 +8,7 @@ const Clock = () => {
     <div className='main'>
     <div className='clock-main'>
         <div className='functions'>
-            <h1 className='text-center'>25+5 Clock</h1>
+            <h1 className='text-center'>Alarm Clock</h1>
             <div className='buttons'>
                 <div className='buttons-break'>
                 <div className='button-2'>
@@ -61,26 +61,28 @@ const Clock = () => {
                     }
                     h--;
                 }
-                
-               
+ 
                let j = valueLen-1
+
                for(let i =0; i< 60*valueLen; i++){
-                
-                    (function(i){
-                        
-                        setTimeout(()=>{
+                (function(i){
+                    setTimeout(()=>{
                             
-                            tiempo.innerHTML = j+":"+arr[i]
-                            if(arr[i]===0){
-                                j--;
-                            }
-                        },1000*(i+1))
-                    })(i)
-                    
-               }
+                        tiempo.innerHTML = j+":"+arr[i]
+                        if(arr[i]===0){
+                            j--;
+                        }
+                        
+                    },1000*(i+1))
+
+                })(i)
+           }
+           
 
             }}><i className='fa fa-play fa-2x'></i></button>
-            <button className='btn'><i className='fa fa-refresh fa-2x'></i></button>
+            <button className='btn' id="reset" onClick={()=>{
+                 window.location.reload()
+            }}><i className='fa fa-refresh fa-2x'></i></button>
             
         </div>
     </div>
